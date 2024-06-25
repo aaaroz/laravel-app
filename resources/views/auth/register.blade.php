@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+    <div class="flex justify-center">
+        <div class="columns-2xl">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header bg-sky-800 text-white">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" class="py-8">
                         @csrf
 
                         <div class="row mb-3">
@@ -63,7 +63,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="rounded py-2 px-4 bg-sky-800 hover:bg-sky-700 transition-colors duration-300 text-white">
                                     {{ __('Register') }}
                                 </button>
                             </div>
