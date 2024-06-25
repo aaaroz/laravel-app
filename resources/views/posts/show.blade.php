@@ -3,7 +3,7 @@
 <div class="container mt-4">
     <div class="flex items-center justify-between mb-4">
         <h1 class="text-2xl font-semibold">Detail Post</h1>
-        <a href="{{ route('dashboard') }}" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700">Kembali ke Daftar Post</a>
+        <a href="/posts/dashboard" class="bg-gray-800 text-white font-bold py-2 px-4 rounded-md hover:bg-gray-700 text-sm">Kembali ke dashboard</a>
     </div>
     <div class="bg-white p-4 rounded-md shadow-sm border">
       <div class="flex justify-between items-center mb-4">

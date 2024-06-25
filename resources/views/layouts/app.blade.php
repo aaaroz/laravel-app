@@ -23,11 +23,11 @@
 <body>
     <div id="app">
         <nav class="bg-sky-800 text-white">
-            <div class="container flex justify-between py-3 px-10 items-center">
+            <div class="container flex  py-3 px-10 ">
+                <ul class="flex gap-4 justify-between items-center w-full">
                 <a class="text-2xl font-semibold" href="{{ url('/') }}">
                     {{ config('app.name', 'sas') }}
                 </a>
-                <ul class="flex gap-4">
                     @guest
                         @if (Route::has('login'))
                             <li class="">
@@ -43,13 +43,17 @@
                             </li>
                         @endif
                     @else
-                        <li class="flex gap-x-8" >
-                            <a class="text-xl hover:text-sky-200 transition-colors duration-300" href="/dashboard"
+                        <li class="flex gap-x-8">
+                            <a class="text-xl hover:text-sky-200 transition-colors duration-300" href="/posts/dashboard"
                                 role="button">
                                 Hi ! {{ Auth::user()->name }}
                             </a>
-
-                            <a class="flex gap-2 items-center hover:text-sky-300 transition-colors duration-300"
+                        </li>
+                        <li class="flex gap-x-2 items-center">
+                            <a href="/posts/dashboard" class="flex gap-1 items-center hover:text-sky-200 transition-colors duration-300">
+                                <x-ri-dashboard-line class="w-6 h-6" /> {{__('Dashboard')}}
+                            </a>
+                            <a class="flex gap-1 items-center hover:text-sky-300 transition-colors duration-300"
                                 href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">

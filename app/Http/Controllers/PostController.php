@@ -56,7 +56,7 @@ class PostController extends Controller
          $post->published_at = now();
          $post->save();
  
-         return redirect()->route('dashboard')->with('success', 'Post berhasil ditambahkan!');
+         return redirect('/posts/dashboard')->with('success', 'Post berhasil ditambahkan!');
      }
  
      // Menampilkan form edit post berdasarkan ID
@@ -90,7 +90,7 @@ class PostController extends Controller
          $post->category_id = $validatedData['category_id'];
          $post->save();
  
-         return redirect()->route('dashboard')->with('success', 'Post berhasil diperbarui!');
+         return redirect('/posts/dashboard')->with('success', 'Post berhasil diperbarui!');
      }
  
      // Menghapus post berdasarkan ID
@@ -102,6 +102,6 @@ class PostController extends Controller
          }
          $post->delete();
  
-         return redirect()->route('dashboard')->with('success', 'Post berhasil dihapus!');
+         return redirect('/posts/dashboard')->with('success', 'Post berhasil dihapus!');
      }
 }

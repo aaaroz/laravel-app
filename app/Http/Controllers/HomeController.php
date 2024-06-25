@@ -22,9 +22,7 @@ class HomeController extends Controller
     }
     public function home()
     {
-        $posts = Post::orderBy('created_at', 'desc')->get();
-        $categories = Category::all();
-        return view('welcome', compact('posts'));
+        return view('home');
     }
     public function detail($id)
     {

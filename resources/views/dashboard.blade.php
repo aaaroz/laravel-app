@@ -23,7 +23,7 @@
                             <div class="mt-3">
                                 <div class="flex justify-between">
                                     <h1 class="font-semibold text-2xl">Postinganmu</h1>
-                                    <a href="posts/create"
+                                    <a href="/posts/create"
                                         class="rounded py-2 px-4 bg-sky-800 hover:bg-sky-700 transition-colors duration-300 text-white">Buat
                                         postingan</a>
                                 </div>
@@ -42,15 +42,15 @@
                                                 <h2 class="text-xl font-semibold mb-2">{{ $post->title }}</h2>
                                                 <p class="text-gray-600 line-clamp-3">{{ $post->content }}</p>
                                                 <div class="flex gap-2 mt-3">
-                                                    <a href="posts/show/{{ $post->id }}"
+                                                    <a href="/posts/show/{{ $post->id }}"
                                                         class="text-blue-500 hover:text-blue-700">
                                                         <x-bx-detail class="w-6 h-6" />
                                                     </a>
-                                                    <a href="posts/edit/{{ $post->id }}"
+                                                    <a href="/posts/edit/{{ $post->id }}"
                                                         class="text-yellow-500 hover:text-yellow-700">
                                                         <x-eva-edit-outline class="w-6 h-6" />
                                                     </a>
-                                                    <a href="posts/{{ $post->id }}"
+                                                    <a href="/posts/{{ $post->id }}"
                                                         class="text-red-500 hover:text-red-700">
                                                         <x-css-trash class="w-6 h-6" />
                                                     </a>

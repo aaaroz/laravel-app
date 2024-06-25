@@ -10,7 +10,7 @@ Auth::routes();
 Route::get('/',[HomeController::class, 'index']);
 Route::get('/{id}', [HomeController::class, 'detail'])->name('detail');
 Route::group(['prefix' => 'posts'], function () {
-    Route::get('/', [PostController::class, 'index']);
+    Route::get('dashboard', [PostController::class, 'index']);
     Route::get('create', [PostController::class, 'create']);
     Route::post('/', [PostController::class, 'store']);
     Route::get('edit/{id}', [PostController::class, 'edit'])->where('id', '[0-9]+');
@@ -19,5 +19,3 @@ Route::group(['prefix' => 'posts'], function () {
     Route::delete('/{id}', [PostController::class, 'destroy'])->where('id', '[0-9]+');
     Route::get('/{id}', [PostController::class, 'destroy'])->where('id', '[0-9]+');
 });
-Route::get('/home', [HomeController::class, 'home'])->name('home');
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
